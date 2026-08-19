@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aayush-portfolio-servlet
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /portfolio
+    envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: "-Xms128m -Xmx384m"
